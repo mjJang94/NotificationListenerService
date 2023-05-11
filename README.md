@@ -1,7 +1,12 @@
-# NotificationListenerService
 
+<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=Android&logoColor=white"/>
+  
 Android SDK에서 제공하는 NotificationListenerService을 상속 받는 서비스를 만들고, 메소드 구현을 통해 모든 Notification에 대한 정보를 받을 수 있다.
+
+
 상속을 통해 구현되는 이유는 Android SDK는 NotificationManager에 직접 listener를 등록하는 코드를 제공하지 않기 때문이다.
+
+
 
 ## NotificationListenerService 상속 받는 서비스 구현
 
@@ -18,6 +23,8 @@ class NotificationListener: NotificationListenerService() {
 }
 ```
 
+
+
 ## AndroidManifest 추가
 ```
   <service
@@ -30,6 +37,8 @@ class NotificationListener: NotificationListenerService() {
       </intent-filter>
   </service>
 ```
+
+
 
 ## 사용자 권한 체크
 ```
@@ -52,6 +61,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+
+
 
 ## 결과
 ```
